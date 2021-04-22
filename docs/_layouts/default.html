@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ page.title }}</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		{% feed_meta %}
+		{% seo %}
+	</head>
+	<body>
+		<header>
+			<div class="container-fluid">
+				<h1>imabr777</h1>
+				{% include navigation.html %}
+			</div>
+		</header>
+		<main>
+			{{ content }}
+		</main>
+		<footer>
+			{% include social-links.html %}
+			<p>Copyright &copy; imabr777</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,163 @@
+$color1: rgb(40, 44, 56);
+$color2: rgb(255, 255, 255);
+$color3: #9ACC76;
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
+$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+
+$spacing: 16px;
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure { 
+	margin: 0;	
+	padding: 0; 
+}
+
+html { 
+	font-family: $base-font-family; 
+}
+
+ul, ol {
+	list-style: none;
+}
+
+img { 
+	width: 100%; 
+}
+
+p {
+	margin-bottom: $spacing;
+}
+
+a { 
+	color:#0087ff;
+	text-decoration:underline;
+}
+
+
+
+header {
+	position: relative;
+	z-index: 15;
+	background-color: $color1;
+	color: $color2;  
+	padding-top: $spacing;
+	padding-bottom: $spacing;
+
+	h1 {
+		display: inline-block;
+		margin-right: 2rem;
+	}
+
+	nav {
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.nav-links {
+			a {
+				color: white;	
+				text-decoration: none;
+				margin-right: $spacing;
+				transition: color .3s;
+
+				&:hover, &.current-page {
+					color: $color3;
+				}
+			}
+		}
+	}
+}
+
+main {
+	display: block;
+	background-color: $color2;
+	color: $color1;
+
+	.featured-image {
+		height: 500px;
+	}
+
+	.banner-image {
+		height: 200px;
+	}
+
+	.featured-image, .banner-image {
+		position: relative;
+		img {
+			height: 100%;
+			object-fit: cover;
+			object-position: center 20%;
+		}
+
+		.overlay {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			background: rgba(0,0,0,0.5);
+			color: $color2;
+			text-align: center;
+			font-size: 2rem;
+		}
+	}
+
+	.main-content {
+		margin-top: $spacing;
+		margin-bottom: $spacing;
+	}
+}
+
+// /**
+//  * Code formatting
+//  */
+// pre,
+// code {
+//   font-family: $code-font-family;
+//   font-size: 0.9375em;
+//   border: 1px solid lightgrey;
+//   border-radius: 3px;
+//   background-color: lightgrey;
+// }
+
+// code {
+//   padding: 1px 5px;
+// }
+
+// pre {
+//   padding: 8px 12px;
+//   overflow-x: auto;
+
+//   > code {
+//     border: 0;
+//     padding-right: 0;
+//     padding-left: 0;
+//   }
+// }
+
+footer {
+	background-color: rgb(20, 22, 28);
+	color: rgb(175, 177, 181);
+	height: 200px;
+
+	.social-icons {
+		display: flex;
+		justify-content: center;
+		padding-top: $spacing;
+
+		> * {
+			width: 32px;
+			height: 32px;
+			padding: calc(32px / 2);
+		}
+	}
+
+	p {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
